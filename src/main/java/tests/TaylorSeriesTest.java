@@ -58,4 +58,21 @@ public class TaylorSeriesTest {
             i++;
         }
     }
+
+    public static void testCos(double x){
+        String result;
+        int i = 1;
+        while (x < 30){
+            if (Math.abs(TaylorSeries.cos(x, N) - Math.cos(x)) <= EPS){
+                result = "valid";
+            }
+            else result = "invalid";
+            System.out.println("----Test" + i + ". Cosinus. With x = " + x +
+                    "\nMy method result: " + TaylorSeries.cos(x, N));
+            System.out.println("Math method result: " + Math.cos(x) +
+                    "\nTest result: " + result);
+            x += 1.5;
+            i++;
+        }
+    }
 }
