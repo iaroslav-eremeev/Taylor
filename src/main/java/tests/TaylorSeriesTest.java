@@ -41,4 +41,21 @@ public class TaylorSeriesTest {
             i++;
         }
     }
+
+    public static void testSin(double x){
+        String result;
+        int i = 1;
+        while (x < 30){
+            if (Math.abs(TaylorSeries.sin(x, N) - Math.sin(x)) <= EPS){
+                result = "valid";
+            }
+            else result = "invalid";
+            System.out.println("----Test" + i + ". Sinus. With x = " + x +
+                    "\nMy method result: " + TaylorSeries.sin(x, N));
+            System.out.println("Math method result: " + Math.sin(x) +
+                    "\nTest result: " + result);
+            x += 1.5;
+            i++;
+        }
+    }
 }
