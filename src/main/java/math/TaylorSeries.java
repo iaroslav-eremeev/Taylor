@@ -20,7 +20,7 @@ public class TaylorSeries {
         double numerator = 1;
         double i = 1;
         double a = sum;
-        while (a > eps){
+        while (a > eps || -a > eps){
             numerator *= x;
             factorial *= i;
             sum += numerator / factorial;
@@ -28,6 +28,10 @@ public class TaylorSeries {
             a = numerator / factorial;
         }
         return sum;
+    }
+
+    public static double sin(double x){
+
     }
 
 }

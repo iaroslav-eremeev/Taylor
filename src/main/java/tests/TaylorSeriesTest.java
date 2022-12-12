@@ -16,8 +16,10 @@ public class TaylorSeriesTest {
                 result = "valid";
             }
             else result = "invalid";
-            System.out.println("----Test" + i + ". Exponent. x = " + x + " My method result: " + TaylorSeries.exp(x, N));
-            System.out.println("Math method result: " + Math.exp(x) + " Answer: " + result);
+            System.out.println("----Test" + i + ". Exponent. With x = " + x +
+                    "\nMy method result: " + TaylorSeries.exp(x, N));
+            System.out.println("Math method result: " + Math.exp(x) +
+                    "\nTest result: " + result);
             x += 1.5;
             i++;
         }
@@ -31,8 +33,10 @@ public class TaylorSeriesTest {
                 result = "valid";
             }
             else result = "invalid";
-            System.out.println("----Test" + i + ". Exponent. x = " + x + " My method result: " + TaylorSeries.expEps(x, EPS));
-            System.out.println("Math method result: " + Math.exp(x) + " Answer: " + result);
+            System.out.println("----Test" + i + ". Exponent. With x = " + x +
+                    "\nMy method result: " + TaylorSeries.expEps(x, EPS));
+            System.out.println("Math method result: " + Math.exp(x) +
+                    "\nTest result: " + result);
             x += 1.5;
             i++;
         }
