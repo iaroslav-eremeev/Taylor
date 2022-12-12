@@ -46,4 +46,20 @@ public class TaylorSeries {
         return sum;
     }
 
+    public static double cos(double x, int n){
+        double sum = 1;
+        double numerator = 1;
+        double denominator = 1;
+        double sign = -1;
+        for (int i = 1; i <= 2 * n; i++) {
+            numerator *= x;
+            denominator *= i;
+            if (i % 2 == 0){
+                sum += numerator / denominator * sign;
+                sign = -sign;
+            }
+        }
+        return sum;
+    }
+
 }
