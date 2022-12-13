@@ -4,8 +4,6 @@ import tests.TaylorSeriesTest;
 
 public class Program {
     public static void main(String[] args) {
-        /*TaylorSeriesTest.testExpEps(1);*/
-        TaylorSeriesTest.testSinEps(1);
-        /*TaylorSeriesTest.testCos(1);*/
+        TaylorSeriesTest.testCosEps(1);
     }
 }

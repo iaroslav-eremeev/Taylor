@@ -82,4 +82,23 @@ public class TaylorSeries {
         return sum;
     }
 
+    public static double cosEps(double x, double eps){
+        double sum = 1;
+        double numerator = 1;
+        double denominator = 1;
+        double sign = -1;
+        double i = 1;
+        double a = 1;
+        while (a > eps || -a > eps){
+            numerator *= x;
+            denominator *= i;
+            if (i % 2 == 0){
+                a = numerator / denominator * sign;
+                sum += a;
+                sign = -sign;
+            }
+            i++;
+        }
+        return sum;
+    }
 }
