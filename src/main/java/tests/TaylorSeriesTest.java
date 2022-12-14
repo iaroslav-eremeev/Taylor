@@ -109,4 +109,21 @@ public class TaylorSeriesTest {
             i++;
         }
     }
+
+    public static void testAtan(double x){
+        String result;
+        int i = 1;
+        while (x < 1){
+            if (Math.abs(TaylorSeries.atan(x, N) - Math.atan(x)) <= EPS){
+                result = "valid";
+            }
+            else result = "invalid";
+            System.out.println("----Test" + i + ". Cosines. With x = " + x +
+                    "\nMy method result: " + TaylorSeries.atan(x, N));
+            System.out.println("Math method result: " + Math.atan(x) +
+                    "\nTest result: " + result);
+            x += 0.015;
+            i++;
+        }
+    }
 }

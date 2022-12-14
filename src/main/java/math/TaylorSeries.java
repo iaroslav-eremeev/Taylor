@@ -102,7 +102,7 @@ public class TaylorSeries {
         return sum;
     }
 
-    public static double arctg(double x, int n){
+    public static double atan(double x, int n){
         if (x > 1 || x < -1){
             throw new IllegalArgumentException("X should be less than 1 or more than -1");
         }
