@@ -143,4 +143,56 @@ public class TaylorSeries {
         }
         return sum;
     }
+
+    /**
+     * Гиперболический синус (англ. -  sinh)
+     * По сути функция синуса, но без перемены знака для слагаемых
+     */
+    public static double sh(double x, int n){
+        double sum = 0;
+        double denominator = 1;
+        double numerator = 1;
+        for (int i = 1; i <= 2 * n + 1; i++) {
+            numerator *= x;
+            denominator *= i;
+            if (i % 2 != 0){
+                sum += numerator / denominator;
+            }
+        }
+        return sum;
+    }
+
+    /**
+     * Гиперболический косинус (англ. - cosh)
+     */
+    public static double ch(double x, int n){
+        double sum = 1;
+        double numerator = 1;
+        double denominator = 1;
+        for (int i = 1; i <= 2 * n; i++) {
+            numerator *= x;
+            denominator *= i;
+            if (i % 2 == 0){
+                sum += numerator / denominator;
+            }
+        }
+        return sum;
+    }
+
+    /**
+     * Гиперболический тангенс (англ. - tanh)
+     */
+    public static double th(double x, int n){
+        if (x >= Math.PI / 2 || x <= Math.PI / 2){
+            throw new IllegalArgumentException("X should be less than PI/2 or more than -PI/2");
+        }
+        double sum = 0;
+        double numerator = 1;
+        double denominator = 1;
+        double sign = 1;
+        for (int i = 1; i <= 2 * n - 1; i++) {
+            numerator *= x;
+            denominator
+        }
+    }
 }
